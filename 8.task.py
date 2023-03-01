@@ -3,33 +3,8 @@ from matplotlib import pyplot
 import numpy as np
 orgimage = image.imread('nature.jpg')
 
-# print(orgimage)
-
-
-def brightness():
-    IncreaseBrightness = orgimage + 20
-    ReduceBrightness = orgimage - 10
-    pyplot.subplot(1,3,1), pyplot.imshow(orgimage), pyplot.title('Orgnial Image')
-    pyplot.subplot(1,3,2), pyplot.imshow(IncreaseBrightness), pyplot.title('Increase Brightness')
-    pyplot.subplot(1,3,3), pyplot.imshow(ReduceBrightness), pyplot.title('Reduce Brightness')
-    pyplot.show()
-# brightness()
-
-# saturation
 
 #contrast
-
-def saturation():
-    pyplot.subplot(1,2,1), pyplot.imshow(orgimage), pyplot.title('Orgnial Image')
-    orgimage_to_ndArray = np.array(orgimage)
-    for pexelIndex,pexel in np.ndenumerate(orgimage):
-        if pexel < 150:
-            orgimage_to_ndArray[pexelIndex] = pexel + 50
-        elif pexel > 100:
-            orgimage_to_ndArray[pexelIndex] = pexel - 50
-    pyplot.subplot(1,2,2), pyplot.imshow(orgimage_to_ndArray), pyplot.title('contrast Image')
-    pyplot.show()
-# saturation()
 
 def compare(redPexel, greenPexel, bluePexel, tolerance, index, orgimage_to_ndArray):
    
@@ -82,9 +57,6 @@ pyplot.subplot(1,2,1), pyplot.imshow(orgimage), pyplot.title('Orginal Image')
 pyplot.subplot(1,2,2), pyplot.imshow(orgimage_to_ndArray), pyplot.title('Contrast Image')
 pyplot.show()
 
-# res = np.array_equal(orgimage_to_ndArray, orgimage)
-
-# print(res)
 
 
 
