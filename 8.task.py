@@ -24,7 +24,7 @@ def compare(redPexel, greenPexel, bluePexel, tolerance, index, orgimage_to_ndArr
      'bluePexel':((bluePexel <= (redPexel + tolerance + tolerance)) and (bluePexel >= (redPexel - tolerance))) and ((bluePexel <= (greenPexel + tolerance)) and (bluePexel >= (greenPexel - tolerance)))
     }
 }
-    
+     
     result = np.all([pexel[2]['redPexel'],  pexel[3]['greenPexel'], pexel[4]['bluePexel']])
 
     if pexel[1] == True:
