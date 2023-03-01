@@ -4,17 +4,6 @@ from matplotlib import pyplot
 orgImage = Image.open('nature.jpg')
 
 
-# orgImage.show()
-# print(orgImage.format)
-
-# numpyImage = np.asarray(orgImage)
-# numpyImage = numpyImage + 50
-
-
-# print("numpyImage:",type(numpyImage))
-# print("pillowFormat:",type(orgImage))
-
-
 # 28/02/2023
 sizeOfImage = orgImage.size
 print("Size Of Image:",sizeOfImage)
